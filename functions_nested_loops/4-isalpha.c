@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _islower - Entry point
+ * _isalpha - Entry point
  *
  * Return: 0 , 1
  * @c: int
@@ -11,9 +11,9 @@ int _isalpha(int c)
 	{
 		return (1);
 	}
-	else if(c >= 'A' && c <= 'Z')
+	else if (c >= 'A' && c <= 'Z')
 	{
-		return(1);
+		return (1);
 	}
 	return (0);
 }
