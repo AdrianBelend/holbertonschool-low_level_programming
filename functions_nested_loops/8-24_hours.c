@@ -9,6 +9,13 @@ void jack_bauer(void)
 	int horas = 0;
 	int minutos = 0;
 
+	_putchar('0');
+	_putchar('0');
+	_putchar(':');
+	_putchar('0');
+	_putchar('0');
+	_putchar('\n');
+
 	if (horas < 24)
 	{
 		do {
