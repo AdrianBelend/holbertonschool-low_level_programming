@@ -3,7 +3,8 @@
  * mul - Entry point
  *
  * Return: 0 , 1
- * @c: int
+ * @a: int
+ * @b: int
  */
 
 int mul(int a, int b)
