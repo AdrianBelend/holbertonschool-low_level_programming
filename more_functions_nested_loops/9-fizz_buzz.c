@@ -8,25 +8,25 @@ int main(void)
 {
 	int num;
 
-	for (num = 1; num <= 100; num++)
+	for (num = 1; num <= 99; num++)
 	{
 		if ((num % 3) == 0 && (num % 5) == 0)
 		{
-			printf("fizzbuzz ");
+			printf("FizzBuzz ");
 		}
 			else if ((num % 3) == 0)
 			{
-				printf("fizz ");
+				printf("Fizz ");
 			}
 			else if ((num % 5) == 0)
 			{
-				printf("buzz ");
+				printf("Buzz ");
 			}
 			else
 			{
 				printf("%d ", num);
 			}
 		}
-	printf("\n");
+	printf("Buzz\n");
 	return (0);
 }
