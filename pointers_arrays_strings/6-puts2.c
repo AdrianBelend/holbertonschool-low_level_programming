@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * puts2 - Entry point
  * @str: char *
  */
