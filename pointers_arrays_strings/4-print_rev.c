@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * _puts - Entry level
- * @str: int *
+ * print_rev - Entry level
+ * @s: char *
  */
 
 void print_rev(char *s)
@@ -14,7 +14,7 @@ void print_rev(char *s)
 	{
 		c++;
 	}
-	for(b = (c - 1); b >= 0;b--)
+	for (b = (c - 1) ; b >= 0; b--)
 	{
 		_putchar(s[b]);
 	}
