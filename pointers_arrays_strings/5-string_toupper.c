@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * *string_toupper - Entry point
+ * @a: char *
  * Return: 0
  */
 
@@ -16,5 +17,5 @@ char *string_toupper(char *a)
 			a[i] = a[i] - 32;
 		}
 	}
-	return(a);
+	return (a);
 }
