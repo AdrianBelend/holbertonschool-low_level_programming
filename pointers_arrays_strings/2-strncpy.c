@@ -9,15 +9,14 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int a;
+	int i;
 
-	for (a = 0; a < n && src[a] != '\0'; a++)
+	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
-		dest[a] = src[a];
-		while (a < n)
+		dest[i] = src[i];
+		for (; i < n; i++)
 		{
-			a++;
-			dest[a] = '\0';
+			dest[i] = '\0';
 		}
 	}
 	return (dest);
