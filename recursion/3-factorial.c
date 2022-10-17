@@ -2,6 +2,7 @@
 /**
  * factorial - Entry point
  * @n: int
+ * Return: 0
  */
 
 int factorial(int n)
