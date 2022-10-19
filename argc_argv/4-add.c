@@ -1,31 +1,32 @@
-/**
-* main - main function
-* @argc: default int
-* @argv: default array
-*
-* Description: prints numberz
-* Return: value 0 (success)
-*/
 #include <stdio.h>
 #include <stdlib.h>
+
+/**
+* main - Entry point
+* @argc: The number of arguments passed to the program.
+* @argv: An array of pointers to the arguments.
+*
+* Return: 0
+*/
 int main(int argc, char *argv[])
 {
-	int i;
-	int j;
-	int result = 0;
+	int num, digit, sum = 0;
 
-	for (i = 0; i < argc; i++)
-{
-	for (j = 1; *(argv[i] + j) != '\0'; j++)
+	for (num = 1; num < argc; num++)
 	{
-		if (*(argv[i] + j) >= 'A' && (*(argv[i] + j) <= 'z'))
+		for (digit = 0; argv[num][digit]; digit++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[num][digit] < '0' || argv[num][digit] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
+
+		sum += atoi(argv[num]);
 	}
-	result = result + strtol(argv[i], NULL, 10);
-}
-	printf("%d\n", result);
+
+	printf("%d\n", sum);
+
 	return (0);
 }
