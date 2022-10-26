@@ -2,29 +2,51 @@
 #include <stdlib.h>
 #include <string.h>
 /**
-* str_concat : Entry point
-* @s1: char *
-* @s2: char *
-* Return: 0
-*/
+ * str_concat - Entry point
+ * @s1: char *
+ * @s2: char *
+ * Return: 0
+ */
 char *str_concat(char *s1, char *s2)
 {
+	int i = 0, j = 0, k = 0, l = 0;
+	char *s;
 
-	unsigned int s1len = strlen(s1);
-	unsigned int s2len = strlen(s2);
-	unsigned int len = s1len + s2len + 1;
-	unsigned int i;
-	char *p;
+	if (s1 == NULL)
+		s1 = "";
 
-	p = malloc(sizeof(char) * len);
+	if (s2 == NULL)
+		s2 = "";
 
-	for (i = 0; s1[i]; i++)
+	while (s1[i])
+		i++;
+
+	while (s2[j])
+		j++;
+
+	l = i + j;
+	s = malloc((sizeof(char) * l) + 1);
+
+	if (s == NULL)
+		return (NULL);
+
+	j = 0;
+
+	while (k < l)
 	{
-		p[i] = s1[i];	
+		if (k <= i)
+			s[k] = s1[k];
+
+		if (k >= i)
+		{
+			s[k] = s2[j];
+			j++;
+		}
+
+		k++;
 	}
-	for (i = 0; s2[i]; i++)
-	{
-		p[s1len + i] = s2[i];
-	}
-	return p;
+
+	s[k] = '\0';
+	return (s);
 }
+
