@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * print_lists - Entry point
+ * print_list - Entry point
  * @h: pointer
  * Return: 0
  */
