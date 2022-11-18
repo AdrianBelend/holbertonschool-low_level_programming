@@ -3,19 +3,18 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * add_node - Entry point
+ * free_list - Entry point
  * @head: pointer to pointer
- * @str: pointer
- * Return: 0
  */
 void free_list(list_t *head)
 {
-	list_t *node;
+	list_t *node = head;
 
 	while (head)
 	{
-		node = node->next;
-		free (node);
-		*head = *node;
+		head = head->next;
+		free(node->str);
+		free(node);
+		node = head;
 	}
 }
