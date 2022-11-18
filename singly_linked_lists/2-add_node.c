@@ -14,12 +14,18 @@ list_t *add_node(list_t **head, const char *str)
 	int l = 0;
 
 	if (n == NULL)
+	{
+		free(n);
 		return (NULL);
-	for (;str != NULL && str[l] != '\0';l++)
+	}
+	for (; str != NULL && str[l] != '\0'; l++)
 		;
 	n->str = strdup(str);
 	if (n->str == NULL)
+	{
+		free(n);
 		return (NULL);
+	}
 	n->len = l;
 
 	if (*head == NULL)
