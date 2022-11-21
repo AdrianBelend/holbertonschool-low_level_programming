@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * clear_but - Entry point
+ * clear_bit - Entry point
  * @n: uli
  * @index: uint
  * Return: 0
