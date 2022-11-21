@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * get_node_int_at_index - Entry point
+ * get_nodeint_at_index - Entry point
  * @head: pointer
  * @index: uint
  * Return: 0
