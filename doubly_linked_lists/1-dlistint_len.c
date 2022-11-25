@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * listint_len - Entry point
+ * dlistint_len - Entry point
  * @h: pointer
  * Return: 0
  */
